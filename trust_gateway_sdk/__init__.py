@@ -1,5 +1,5 @@
-"""Trust Gateway Python SDK"""
-from .client import TrustClient
+"""Trust Gateway Python SDK V2"""
+from .client import TrustClient, TrustClientAsync, WebSocketDashboard
 
-__version__ = "0.1.0"
-__all__ = ["TrustClient"]
+__version__ = "2.0.0"
+__all__ = ["TrustClient", "TrustClientAsync", "WebSocketDashboard"]

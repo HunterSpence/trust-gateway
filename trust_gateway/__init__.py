@@ -1,2 +1,2 @@
-"""Trust Gateway - AI Agent Trust Scoring and Authorization System"""
-__version__ = "0.1.0"
+"""Trust Gateway V2 - AI Agent Trust Scoring and Authorization with SPIFFE Identity"""
+__version__ = "2.0.0"
