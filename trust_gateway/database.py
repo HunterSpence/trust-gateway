@@ -117,7 +117,7 @@ class Database:
                 (agent_id, name, provider, config_hash, json.dumps(capabilities), 
                  datetime.utcnow().isoformat(), config_hash)
             )
-            return self.get_agent(agent_id)
+        return self.get_agent(agent_id)
     
     def get_agent(self, agent_id: str) -> Optional[Dict]:
         """Get agent by ID"""

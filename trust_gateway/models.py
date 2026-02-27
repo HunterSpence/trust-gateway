@@ -1,7 +1,7 @@
 """Database models for Trust Gateway"""
 from datetime import datetime
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, validator
 
 
 class Agent(BaseModel):
@@ -19,6 +19,9 @@ class Agent(BaseModel):
     tier: int = 0
     config_changes: int = 0
     last_config_hash: Optional[str] = None
+    
+    class Config:
+        arbitrary_types_allowed = True
 
 
 class AgentRegistration(BaseModel):
@@ -26,7 +29,13 @@ class AgentRegistration(BaseModel):
     name: str = Field(..., min_length=1, max_length=100)
     provider: str = Field(..., min_length=1, max_length=50)
     config_hash: str = Field(..., min_length=32, max_length=128)
-    capabilities: List[str] = Field(..., min_items=1)
+    capabilities: List[str]
+    
+    @validator('capabilities')
+    def validate_capabilities(cls, v):
+        if not v or len(v) < 1:
+            raise ValueError('Must have at least one capability')
+        return v
 
 
 class ActionReceipt(BaseModel):
@@ -45,8 +54,14 @@ class ActionRecord(BaseModel):
     """Action recording request"""
     agent_id: str
     action: str
-    result: str = Field(..., regex="^(success|failure|violation)$")
+    result: str
     timestamp: Optional[datetime] = None
+    
+    @validator('result')
+    def validate_result(cls, v):
+        if v not in ['success', 'failure', 'violation']:
+            raise ValueError('Result must be success, failure, or violation')
+        return v
 
 
 class AuthorizationRequest(BaseModel):
