@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  trust-gateway:
+    build: .
+    container_name: trust-gateway
+    ports:
+      - "8002:8002"
+    environment:
+      - DB_PATH=/data/trust_gateway.db
+      - SECRET_KEY=${SECRET_KEY:-change-this-secret-key-in-production}
+      - API_KEY=${API_KEY:-change-this-api-key-in-production}
+    volumes:
+      - trust-data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:8002/health').raise_for_status()"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+
+volumes:
+  trust-data:
+    driver: local

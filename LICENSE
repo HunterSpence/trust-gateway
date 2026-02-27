@@ -1,0 +1,65 @@
+PROPRIETARY SOFTWARE LICENSE
+
+Copyright © 2024 Hunter Spence. All rights reserved.
+
+PATENT PROTECTION
+
+This software implements technology protected by US Patent Application (pending):
+"Trust Gateway: AI Agent Trust Scoring and Graduated Authorization System"
+
+EVALUATION LICENSE
+
+Permission is hereby granted to any person obtaining a copy of this software and
+associated documentation files (the "Software"), to use the Software for evaluation
+purposes only, subject to the following conditions:
+
+1. PERMITTED USE
+   - Evaluation and testing in non-production environments
+   - Personal research and educational purposes
+   - Trial deployments with data that is not business-critical
+
+2. RESTRICTIONS
+   - NO commercial use without a paid license
+   - NO modification or creation of derivative works
+   - NO redistribution, sublicensing, or public deployment
+   - NO reverse engineering or decompilation
+   - NO removal of copyright, patent, or license notices
+
+3. COMMERCIAL LICENSE REQUIRED FOR:
+   - Production deployments serving customers or end-users
+   - Integration into commercial products or services
+   - Use in revenue-generating operations
+   - Deployments with more than 5 registered agents
+
+4. TERM
+   This evaluation license is valid for 30 days from first use. After 30 days,
+   continued use requires a paid commercial license.
+
+5. COMMERCIAL LICENSING
+   For commercial licenses, contact:
+   Email: hspence21190@gmail.com
+   Pricing: https://trust-gateway.dev/pricing
+
+6. NO WARRANTY
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+   THE SOFTWARE.
+
+7. TERMINATION
+   This license automatically terminates if you violate any of these terms.
+   Upon termination, you must destroy all copies of the Software.
+
+8. PATENT RIGHTS
+   This license does NOT grant any patent rights. Use of the Software in
+   production or commercial contexts may require a separate patent license.
+
+9. GOVERNING LAW
+   This license shall be governed by the laws of the United States, without
+   regard to conflict of law provisions.
+
+For questions about this license or to obtain a commercial license:
+Contact: hspence21190@gmail.com
